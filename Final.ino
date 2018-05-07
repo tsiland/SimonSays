@@ -7,7 +7,7 @@ ICEN 150 Intro to Engineering Analysis
 const int redTone = 200;    //red ligth on with 200 Hz buzz sound
 const int yellowTone = 500; //yellow light on with 500 Hz buzz sound
 const int greenTone = 800;  //green light on with 800 Hz buzz sound
-const int failTone = 80;
+const int failTone = 80; //all lights on with 80 Hz buzz sound
 
 int count = 0; //length of the array
 int i;         //global variable defined for for loops
@@ -32,7 +32,7 @@ void setup()
     pinMode(ledPin2, OUTPUT);
     pinMode(buttonPin2, INPUT);
     pinMode(ledPin3, OUTPUT);
-    pinMode(buttonPin3, INPUT);
+    pinMode(buttonPin3, INPUT); 
     pinMode(buzzer, OUTPUT); //buzzer PinMode setup
 }
 
@@ -55,7 +55,7 @@ void fail()
 /* red tone and red light */
 void red()
 {
-    digitalWrite(ledPin1, HIGH);
+    digitalWrite(ledPin1, HIGH); 
     tone(buzzer, redTone);
     delay(800);
     noTone(buzzer);
